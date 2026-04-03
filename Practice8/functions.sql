@@ -18,7 +18,7 @@ BEGIN
     RETURN QUERY
     SELECT p.id, p.first_name, p.phone
     FROM phonebook p
-    ORDER BY p.first_name
+    ORDER BY p.id ASC
     LIMIT p_limit OFFSET p_offset;
 END;
 $$ LANGUAGE plpgsql;
